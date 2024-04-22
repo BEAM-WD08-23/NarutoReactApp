@@ -39,7 +39,7 @@ function Home() {
 
       <div>
         <Animes data={animes} />
-        {data.map((animes) => <Card anime={animes} />)}
+
       </div>
 
     </>
