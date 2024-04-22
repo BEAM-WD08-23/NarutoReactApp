@@ -19,10 +19,10 @@ animeRouter.post("/animes", async (req, res) => {
   res.json(newAnime);
 });
 
-animeRouter.put("/animes/name/:animeID", async (req, res) => {
-  const { animeName } = req.params;
-  const updatedAnime = await Anime.findByNameAndUpdate(animeName, req.body);
-  const newAnime = await Anime.findByName(animeName);
+animeRouter.put("/animes/:animeID", async (req, res) => {
+  const { animeID } = req.params;
+  const updatedAnime = await Anime.findByIdAndUpdate(animeID, req.body);
+  const newAnime = await Anime.findById(animeID);
   return res.json(newAnime);
 });
 

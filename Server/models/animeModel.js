@@ -5,6 +5,7 @@ const animeSchema = new Schema({
   genre: String,
   episode: Number,
   url: String,
+  image: String,
 });
 
 const Anime = mongoose.model("Anime", animeSchema);
